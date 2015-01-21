@@ -1,0 +1,7 @@
+#开启重写功能
+RewriteEngine on
+#需要重写的规则
+RewriteCond $1 !^(index\.php|images|robots\.txt|favicon\.ico)
+#重写
+RewriteRule ^(.*)$ /index.php/$1 [L]
+#[L]的作用为不再重写
